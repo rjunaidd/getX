@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/Views/screen_one.dart';
+import 'package:getx/Views/screen_two.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -76,6 +78,48 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text("JD"),
               subtitle: Text("getX bottom Sheet"),
               trailing: Icon(Icons.hourglass_bottom),
+            ),
+          ),
+
+          TextButton(
+              onPressed: (){
+                Get.to(ScreenOne());
+              },
+              child: Text('Screen One' ,style: TextStyle(
+                  fontSize: 30,
+                  color: Colors.black
+              ),
+              ),
+          ),
+          SizedBox(
+            height: 60,
+          ),
+          InkWell(
+            onDoubleTap: (){
+              Get.to(ScreenTwo());
+            },
+            child: Container(
+              height:70,
+              width: 200,
+              decoration: BoxDecoration(
+                color: Colors.grey.shade800,
+                borderRadius: BorderRadius.circular(25),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.red,
+                    blurRadius: 50,
+                    offset: Offset(0, 10),
+                    spreadRadius: 20
+                  )
+                ]
+              ),
+              child: Center(
+                child: Text("Screen Two" ,textScaler: TextScaler.noScaling , style: TextStyle(
+                  fontSize: 25,
+                  color: Colors.grey.shade50,
+                  fontWeight: FontWeight.bold
+                ),),
+              ),
             ),
           )
         ],
