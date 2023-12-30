@@ -96,7 +96,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           InkWell(
             onDoubleTap: (){
-              Get.to(ScreenTwo());
+              // Get.to(ScreenTwo());
+              Get.toNamed("/screenOne");
             },
             child: Container(
               height:70,
