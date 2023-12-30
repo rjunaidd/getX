@@ -11,21 +11,29 @@ class ScreenOne extends StatefulWidget {
 class _ScreenOneState extends State<ScreenOne> {
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return  Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TextButton(
-              onPressed: (){
-                Get.back();
-              },
-              child: Text('Back to Home Screen',style: TextStyle(
-                  fontSize: 30,
-                  color: Colors.black
-              ),)
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+
+            Container(
+              height: Get.height * 0.23,
+              width: Get.width * 0.5,
+              decoration: BoxDecoration(
+                color: Colors.red.shade300
+              ),
+              child:const Center(
+                child: Text('CENTER', style: TextStyle(
+                fontSize: 30
+                ),
+                ),
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

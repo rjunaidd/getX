@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/Views/home_screen.dart';
-import 'package:getx/Views/screen_one.dart';
-import 'package:getx/Views/screen_two.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -13,14 +12,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GetMaterialApp(
+    return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home:const HomeScreen(),
-      getPages: [
-        GetPage(name: '/', page: () =>const HomeScreen() ),
-        GetPage(name: '/screenOne', page: () =>const ScreenOne() ),
-        GetPage(name: '/screenTwo', page: () =>const ScreenTwo() ),
-      ],
+      home: HomeScreen(),
+      // getPages: [
+      //   GetPage(name: '/', page: () =>const HomeScreen() ),
+      //   GetPage(name: '/screenOne', page: () =>const ScreenOne() ),
+      //   GetPage(name: '/screenTwo', page: () =>const ScreenTwo() ),
+      // ],
     );
   }
 }
